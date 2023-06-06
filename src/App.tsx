@@ -1,11 +1,14 @@
 import React from 'react'
-import GlobalStyle from './globalStyle'
+import GlobalStyle, { Container } from './globalStyle'
+import Main from './components/Main/Main'
 
 const App = (): JSX.Element => {
   return (
     <>
     <GlobalStyle />
-    <h1>HI THERE</h1>
+      <Container>
+        <Main />
+      </Container>
     </>
   )
 }
