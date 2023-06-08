@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const MainContainer = styled.div`
   background-color: hsl(0, 0%, 100%);
-  max-width: 935px;
+  max-width: 945px;
   max-height: 600px; 
   z-index: 1;
   display: flex;
@@ -13,7 +13,8 @@ export const MainContainer = styled.div`
   @media screen and (max-width: 770px) {
     flex-direction: column;
     max-width: 375px;
-    max-height: 667px;
+    min-height: 667px;
+    max-height: 720px;
     overflow: hidden;
     border-radius: 0px;
     position: absolute;

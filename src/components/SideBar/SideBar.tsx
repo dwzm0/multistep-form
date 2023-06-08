@@ -6,9 +6,10 @@ import { useResize } from '../../hooks/index'
 interface Props {
   smallImg: string
   bigImg: string
+  darkText: boolean
 }
 
-export const SideBar = ({ smallImg, bigImg }: Props): JSX.Element => {
+export const SideBar = ({ darkText, smallImg, bigImg }: Props): JSX.Element => {
   const showSmallBg = useResize()
   return (
     <>
@@ -18,28 +19,28 @@ export const SideBar = ({ smallImg, bigImg }: Props): JSX.Element => {
               <StepCicle>1</StepCicle>
               <StepInfoContainer>
                 <InfoText>STEP 1</InfoText>
-                <SubHeading>YOUR INFO</SubHeading>
+                <SubHeading darkText={darkText}>YOUR INFO</SubHeading>
               </StepInfoContainer>
             </Step>
             <Step>
               <StepCicle>2</StepCicle>
               <StepInfoContainer>
                 <InfoText>STEP 2</InfoText>
-                <SubHeading>SELECT PLAN</SubHeading>
+                <SubHeading darkText={darkText}>SELECT PLAN</SubHeading>
               </StepInfoContainer>
             </Step>
             <Step>
               <StepCicle>3</StepCicle>
               <StepInfoContainer>
                 <InfoText>STEP 3</InfoText>
-                <SubHeading>ADD-ONS</SubHeading>
+                <SubHeading darkText={darkText}>ADD-ONS</SubHeading>
               </StepInfoContainer>
             </Step>
             <Step>
               <StepCicle>4</StepCicle>
               <StepInfoContainer>
                 <InfoText>STEP 4</InfoText>
-                <SubHeading>SUMMARY</SubHeading>
+                <SubHeading darkText={darkText}>SUMMARY</SubHeading>
               </StepInfoContainer>
             </Step>
         </StepContainer>

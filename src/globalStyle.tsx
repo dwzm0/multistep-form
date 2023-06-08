@@ -1,4 +1,9 @@
+/* eslint-disable @typescript-eslint/strict-boolean-expressions */
 import styled, { createGlobalStyle } from 'styled-components'
+
+interface TextProps {
+  readonly darkText: boolean
+}
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -22,8 +27,9 @@ export const GeneralFormContainer = styled.div`
    display: flex;
    flex-direction: column;
    gap: 5px;
-   height: 600px;
+   min-height: 600px;
    padding: 50px 100px;
+   max-width: 650px;
 
    @media screen and (max-width: 930px) {
     padding: 50px 50px;
@@ -33,10 +39,13 @@ export const GeneralFormContainer = styled.div`
    }
 
    @media screen and (max-width: 770px) {
-        height: 380px;
-        width: 342px;
+        min-height: 380px;
+        max-height: 494px;
+        max-width: 342px;
         padding: 28px 25px;
         position: relative;
+        z-index: auto;
+
         bottom: 72px;
         background-color: hsl(0, 0%, 100%);
         border-radius: 10px;
@@ -48,11 +57,22 @@ export const ButtonMobileContainer = styled.div`
 
   @media screen and (max-width: 770px) {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
+    align-self: center;
+    justify-content: space-between;
+    margin-top: 30px;
     background-color: hsl(0, 0%, 100%);
     min-width: 375px;
     min-height: 70px;
+  }
+`
+export const ButtonContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  @media screen and (max-width: 770px) {
+    display: none;
   }
 `
 
@@ -65,14 +85,19 @@ export const Heading = styled.h1`
     font-size: 24px;
   }
 `
-export const SubHeading = styled.h2`
+export const SubHeading = styled.h2<TextProps>`
   font-size: 15px;
   font-weight: 700;
-  color: hsl(0, 0%, 100%);
+  color:  ${({ darkText }) => (darkText ? 'hsl(213, 96%, 18%)' : 'hsl(0, 0%, 100%)')};
+  
+
+  @media screen and (max-width: 770px) {
+    font-size: 16px;
+    }
 `
 
 export const Text = styled.p`
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   color: hsl(231, 11%, 63%);
 
@@ -84,29 +109,17 @@ export const Text = styled.p`
 export const Img = styled.img`
     padding: 0;
     border: 0;
-
     vertical-align: middle;
     display: inline-block;
 `
 
-export const Button = styled.button`
-  background-color: hsl(213, 96%, 18%);
-  color: hsl(0, 0%, 100%);
+const Button = styled.button`
   font-size: 16px;
   font-weight: 700;
   border-radius: 7px;
   border: none;
   padding: 15px 25px;
   cursor: pointer;
-  align-self: flex-end;
-
-  &:hover {
-    background-color: hsl(243, 100%, 62%);
-  }
-
-  &:active {
-    background-color: hsl(228, 100%, 84%);
-  }
 
   @media screen and (max-width: 770px) {
     border-radius: 3px;
@@ -114,6 +127,26 @@ export const Button = styled.button`
     font-size: 15px;
     align-self: auto;
     margin-inline: 20px;  
+  }
+`
+export const BackButton = styled(Button)`
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(231, 11%, 63%);
+
+  &:hover, :active {
+    color: hsl(213, 96%, 18%);
+  }
+`
+export const ForwardButton = styled(Button)`
+  background-color: hsl(213, 96%, 18%);
+  color: hsl(0, 0%, 100%);
+
+  &:hover {
+    background-color: hsl(243, 100%, 62%);
+  }
+
+  &:active {
+    background-color: hsl(228, 100%, 84%);
   }
 `
 export default GlobalStyle

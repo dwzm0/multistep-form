@@ -1,32 +1,5 @@
 import styled from 'styled-components'
 
-export const FormFirstContainer = styled.div`
-   flex: 1;
-   display: flex;
-   flex-direction: column;
-   gap: 5px;
-   height: 600px;
-   padding: 50px 100px;
-
-   @media screen and (max-width: 930px) {
-    padding: 50px 50px;
-   }
-   @media screen and (max-width: 830px) {
-    padding: 50px 25px;
-   }
-
-   @media screen and (max-width: 770px) {
-        height: 380px;
-        width: 342px;
-        padding: 28px 25px;
-        position: relative;
-        bottom: 72px;
-        background-color: hsl(0, 0%, 100%);
-        border-radius: 10px;
-        
-    }
-`
-
 export const FormFirstForm = styled.form`
   display: flex;
   flex-direction: column;
