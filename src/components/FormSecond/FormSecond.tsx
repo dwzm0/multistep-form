@@ -1,6 +1,6 @@
 import React from 'react'
-import { SubHeading, Heading, Text, GeneralFormContainer } from '../../globalStyle'
-import { SecondFormChoiceContainer, SecondFormChoice, LogoContainer, Logo, TextWrapper, PriceText, YearPlanTogglerContainer, YearPlanTogglerLabel, YearPlanTogglerInput, YearPlanTogglerSpan } from './FormSecond.elements'
+import { SubHeading, Heading, Text, GeneralFormContainer, TextWrapper } from '../../globalStyle'
+import { SecondFormChoiceContainer, SecondFormChoice, LogoContainer, Logo, PriceText, YearPlanTogglerContainer, YearPlanTogglerLabel, YearPlanTogglerInput, YearPlanTogglerSpan } from './FormSecond.elements'
 import { useResize } from '../../hooks/index'
 import ButtonsComponent from '../ButtonsComponent'
 import ButtonsMobileComponent from '../ButtonsMobileComponent'

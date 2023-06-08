@@ -37,15 +37,7 @@ export const SecondFormChoice = styled.div`
     height: 75px;
     }
 `
-export const TextWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding: 20px;
-    @media screen and (max-width: 770px) { 
-        padding: 16px 0px;
-    }
-`
+
 export const PriceText = styled(Text)`
     font-size: 15px;
 `

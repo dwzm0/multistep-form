@@ -27,7 +27,7 @@ export const GeneralFormContainer = styled.div`
    display: flex;
    flex-direction: column;
    gap: 5px;
-   min-height: 600px;
+   /* max-height: 600px; */
    padding: 50px 100px;
    max-width: 650px;
 
@@ -39,19 +39,30 @@ export const GeneralFormContainer = styled.div`
    }
 
    @media screen and (max-width: 770px) {
-        min-height: 380px;
-        max-height: 494px;
-        max-width: 342px;
+        /* min-height: 380px;
+        max-height: 494px;  */
+        height: 395px;
+        width: 342px;
         padding: 28px 25px;
-        position: relative;
+        position: absolute;
         z-index: auto;
 
-        bottom: 72px;
+        bottom: 236px;
         background-color: hsl(0, 0%, 100%);
         border-radius: 10px;
         
     }
 `
+export const TextWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 20px;
+    @media screen and (max-width: 770px) { 
+        padding: 16px 0px;
+    }
+`
+
 export const ButtonMobileContainer = styled.div`
   display: none;
 
@@ -60,10 +71,13 @@ export const ButtonMobileContainer = styled.div`
     align-items: center;
     align-self: center;
     justify-content: space-between;
-    margin-top: 30px;
     background-color: hsl(0, 0%, 100%);
     min-width: 375px;
+    /* min-height: 70px; */
     min-height: 70px;
+   position: relative;
+   top: 170px;
+
   }
 `
 export const ButtonContainer = styled.div`
@@ -75,7 +89,6 @@ export const ButtonContainer = styled.div`
     display: none;
   }
 `
-
 export const Heading = styled.h1`
   font-weight: 700;
   color: hsl(213, 96%, 18%);
@@ -95,7 +108,6 @@ export const SubHeading = styled.h2<TextProps>`
     font-size: 16px;
     }
 `
-
 export const Text = styled.p`
   font-size: 16px;
   font-weight: 400;
@@ -112,7 +124,6 @@ export const Img = styled.img`
     vertical-align: middle;
     display: inline-block;
 `
-
 const Button = styled.button`
   font-size: 16px;
   font-weight: 700;
