@@ -1,12 +1,14 @@
 import styled from 'styled-components'
 
 export const FormFirstForm = styled.form`
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   padding-top: 22px;
-  padding-bottom: 90px;
+  padding-bottom: 100px;
 
   @media screen and (max-width: 770px) {
     padding: 0px;

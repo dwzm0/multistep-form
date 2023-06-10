@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Img, Text } from '../../globalStyle'
+import { Text } from '../../globalStyle'
 
 export const SecondFormChoiceContainer = styled.div`
     flex: 1;
@@ -50,7 +50,7 @@ export const LogoContainer = styled.div`
 
 `
 
-export const Logo = styled(Img)`
+export const Logo = styled.img`
     width: 40px;
     height: 40px;
 

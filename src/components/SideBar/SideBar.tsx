@@ -1,16 +1,12 @@
 import React from 'react'
 import { AsideBar, StepContainer, StepInfoContainer, InfoText, Step, StepCicle } from './SideBar.elements'
-import { SubHeading, Img } from '../../globalStyle'
-import { useResize } from '../../hooks/index'
+import { SubHeading } from '../../globalStyle'
 
 interface Props {
-  smallImg: string
-  bigImg: string
   darkText: boolean
 }
 
-export const SideBar = ({ darkText, smallImg, bigImg }: Props): JSX.Element => {
-  const showSmallBg = useResize()
+export const SideBar = ({ darkText }: Props): JSX.Element => {
   return (
     <>
       <AsideBar>
@@ -44,7 +40,6 @@ export const SideBar = ({ darkText, smallImg, bigImg }: Props): JSX.Element => {
               </StepInfoContainer>
             </Step>
         </StepContainer>
-        {showSmallBg ? <Img src={smallImg}/> : <Img src={bigImg}/>}
       </AsideBar>
     </>
   )

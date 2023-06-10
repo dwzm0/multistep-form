@@ -1,11 +1,8 @@
 import React from 'react'
-import { Heading, Text, ForwardButton, ButtonMobileContainer, Section } from '../../globalStyle'
+import { Heading, Text, Section, Footer, ForwardButton } from '../../globalStyle'
 import { FormFirstForm, FormFirstInput, FormFirstLabel } from './FormFirst.elements'
-import { useResize } from '../../hooks/index'
 
 const FormFirst = (): JSX.Element => {
-  const showSmallBg = useResize()
-
   return (
     <>
          <Section>
@@ -19,11 +16,10 @@ const FormFirst = (): JSX.Element => {
                     <FormFirstLabel>Phone Number</FormFirstLabel>
                     <FormFirstInput/>
             </FormFirstForm>
-            {!showSmallBg ? <ForwardButton>Next Step</ForwardButton> : null }
-        </Section>
-          <ButtonMobileContainer>
-              {showSmallBg ? <ForwardButton>Next Step</ForwardButton> : null }
-          </ButtonMobileContainer>
+            <Footer>
+              <ForwardButton>Next Step</ForwardButton>
+            </Footer>
+          </Section>
     </>
   )
 }

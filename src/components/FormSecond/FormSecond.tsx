@@ -1,9 +1,6 @@
 import React from 'react'
-import { SubHeading, Heading, Text, GeneralFormContainer, TextWrapper } from '../../globalStyle'
+import { SubHeading, Heading, Text, Section, TextWrapper } from '../../globalStyle'
 import { SecondFormChoiceContainer, SecondFormChoice, LogoContainer, Logo, PriceText, YearPlanTogglerContainer, YearPlanTogglerLabel, YearPlanTogglerInput, YearPlanTogglerSpan } from './FormSecond.elements'
-import { useResize } from '../../hooks/index'
-import ButtonsComponent from '../ButtonsComponent'
-import ButtonsMobileComponent from '../ButtonsMobileComponent'
 
 interface FormSecondPropsInt {
   arcadeLogo: string
@@ -23,11 +20,9 @@ interface FormSecondPropsInt {
 }
 
 const FormSecond = ({ togglerMonth, togglerYear, headerText, subText, darkText, arcadeLogo, advancedLogo, proLogo, arcadeName, advancedName, proName, arcadePrice, advancedPrice, proPrice }: FormSecondPropsInt): JSX.Element => {
-  const showSmallBg = useResize()
-
   return (
     <>
-        <GeneralFormContainer>
+        <Section>
             <Heading>{headerText}</Heading>
             <Text>{subText}</Text>
             <SecondFormChoiceContainer>
@@ -67,8 +62,7 @@ const FormSecond = ({ togglerMonth, togglerYear, headerText, subText, darkText, 
                   </YearPlanTogglerLabel>
               <SubHeading darkText={true}>{togglerYear}</SubHeading>
             </YearPlanTogglerContainer>
-            {!showSmallBg ? <ButtonsComponent/> : <ButtonsMobileComponent/>}
-        </GeneralFormContainer>
+        </Section>
     </>
   )
 }

@@ -1,16 +1,22 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 import styled from 'styled-components'
 import { Text } from '../../globalStyle'
+import BigImg from '../../images/bg-sidebar-desktop.svg'
+import SmallImg from '../../images/bg-sidebar-mobile.svg'
 
 export const AsideBar = styled.aside`
-    position: relative;
-    max-width: 272px;
-    width: 100%;
+    background-image: url(${BigImg});
+     width: 274px;
+    height: 568px; 
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
 
     @media screen and (max-width: 770px) {
-        padding: 0px;
+        background-image: url(${SmallImg});
+        width: 100%;
+        height: 170px; 
+        /* padding: 48px 48px 100px; */
         display: flex;
         justify-content: center;
     }

@@ -16,15 +16,12 @@ export const MainContainer = styled.main`
    }
 
    @media screen and (max-width: 770px) {
-        width: 342px;
-        min-height: 382px;
-        max-height: 562px; 
-        padding: 28px 25px;
-        position: absolute;
+        max-width: 448px;
+        width: 100%;
+        padding: 24px;
+        background-color: hsl(231, 100%, 99%);
+        border-radius: 0.5rem;
+        margin: -4.5rem auto 0px;
         z-index: 1;
-        bottom: 77px;
-        background-color: hsl(0, 0%, 100%);
-        border-radius: 10px;
-        
     }
 `

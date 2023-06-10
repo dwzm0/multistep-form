@@ -1,9 +1,6 @@
 import React from 'react'
-import { useResize } from '../../hooks/index'
-import { SubHeading, Text, Heading, GeneralFormContainer } from '../../globalStyle'
-import ButtonsComponent from '../ButtonsComponent'
+import { SubHeading, Text, Heading, Section } from '../../globalStyle'
 import { FinalFormContainer, ChoosenPlanContainer, SumContainer, FinalSumText } from './FormFinal.elements'
-import ButtonsMobileComponent from '../ButtonsMobileComponent'
 
 interface formFinalPropsInt {
   finalHeading: string
@@ -11,11 +8,9 @@ interface formFinalPropsInt {
 }
 
 const FormFinal = ({ finalHeading, finalText }: formFinalPropsInt): JSX.Element => {
-  const showSmallBg = useResize()
-
   return (
     <>
-      <GeneralFormContainer>
+      <Section>
           <Heading>{finalHeading}</Heading>
           <Text>{finalText}</Text>
           <FinalFormContainer>
@@ -29,8 +24,7 @@ const FormFinal = ({ finalHeading, finalText }: formFinalPropsInt): JSX.Element 
              <Text>Total(per year)</Text>
              <FinalSumText>$120/yr</FinalSumText>
           </SumContainer>
-          {!showSmallBg ? <ButtonsComponent/> : <ButtonsMobileComponent/>}
-      </GeneralFormContainer>
+      </Section>
     </>
   )
 }

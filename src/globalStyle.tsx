@@ -11,20 +11,26 @@ const GlobalStyle = createGlobalStyle`
   margin: 0;
   padding: 0;
   font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
  } 
 `
 export const GeneralContainer = styled.div`
-  background-color: hsl(231, 100%, 99%);
+  background-color: var(--alabaster);
   height: 100vh;
   width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+  @media screen and (min-width: 770px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
 `
 export const Section = styled.section`
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
 `
 export const TextWrapper = styled.div`
@@ -37,33 +43,28 @@ export const TextWrapper = styled.div`
     }
 `
 
-export const ButtonMobileContainer = styled.div`
-  display: none;
+export const Footer = styled.div`
+      display: grid;
+      position:relative;
+      padding: 0;
+      z-index: 20;    
+      
+    @media screen and (max-width: 770px) {
+        background-color: var(--white);
+        padding: 1rem;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+  }
+`
 
-  @media screen and (max-width: 770px) {
-    display: flex;
-    align-items: center;
-    align-self: center;
-    justify-content: space-between;
-    background-color: hsl(0, 0%, 100%);
-    min-width: 375px;
-    min-height: 70px;
-    z-index: 1;
-  }
-`
-export const ButtonContainer = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-  @media screen and (max-width: 770px) {
-    display: none;
-  }
-`
 export const Heading = styled.h1`
   font-weight: 700;
-  color: hsl(213, 96%, 18%);
-  padding-block: 5px;
+  color: var(--marine-blue);
+  padding-top: 5px;
+  padding-bottom: 10px;
+  font-size: 2rem;
 
   @media screen and (max-width: 770px) {
     font-size: 24px;
@@ -80,23 +81,16 @@ export const SubHeading = styled.h2<TextProps>`
     }
 `
 export const Text = styled.p`
-  font-size: 16px;
   font-weight: 400;
-  color: hsl(231, 11%, 63%);
+  color: var(--cool-gray);
 
   @media screen and (max-width: 770px) {
     font-size: 17px;
   }
   
 `
-export const Img = styled.img`
-    padding: 0;
-    border: 0;
-    vertical-align: middle;
-    display: inline-block;
-`
+
 const Button = styled.button`
-  font-size: 16px;
   font-weight: 700;
   border-radius: 7px;
   border: none;
@@ -112,23 +106,24 @@ const Button = styled.button`
   }
 `
 export const BackButton = styled(Button)`
-  background-color: hsl(0, 0%, 100%);
-  color: hsl(231, 11%, 63%);
+  background-color: var(--white);
+  color: var(--cool-gray);
 
   &:hover, :active {
-    color: hsl(213, 96%, 18%);
+    color: var(--marine-blue);
   }
 `
 export const ForwardButton = styled(Button)`
-  background-color: hsl(213, 96%, 18%);
-  color: hsl(0, 0%, 100%);
+  background-color: var(--marine-blue);
+  color: var(--white);
+  justify-self: flex-end;
 
   &:hover {
-    background-color: hsl(243, 100%, 62%);
+    background-color: var(--purplish-blue);
   }
 
   &:active {
-    background-color: hsl(228, 100%, 84%);
+    background-color: var(--pastel-blue);
   }
 `
 export default GlobalStyle
