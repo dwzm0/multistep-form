@@ -1,9 +1,13 @@
 import styled from 'styled-components'
 import { Text } from '../../globalStyle'
 
-export const ImgWrapper = styled.div`
+export const AsideBar = styled.aside`
     position: relative;
-    padding: 18px 0 18px 22px;
+    max-width: 272px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 
     @media screen and (max-width: 770px) {
         padding: 0px;
@@ -11,7 +15,6 @@ export const ImgWrapper = styled.div`
         justify-content: center;
     }
 `
-
 export const StepContainer = styled.div`
     position: absolute;
     display: flex;
@@ -24,7 +27,6 @@ export const StepContainer = styled.div`
         padding: 30px 0px;
         gap: 18px;
     }
-    
 `
 
 export const Step = styled.div`
@@ -35,7 +37,6 @@ export const Step = styled.div`
 
     
 `
-
 export const StepInfoContainer = styled.div`
     display: flex;
     flex-direction: column;

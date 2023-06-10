@@ -1,5 +1,5 @@
 import React from 'react'
-import { Heading, Text, ForwardButton, ButtonMobileContainer, GeneralFormContainer } from '../../globalStyle'
+import { Heading, Text, ForwardButton, ButtonMobileContainer, Section } from '../../globalStyle'
 import { FormFirstForm, FormFirstInput, FormFirstLabel } from './FormFirst.elements'
 import { useResize } from '../../hooks/index'
 
@@ -8,7 +8,7 @@ const FormFirst = (): JSX.Element => {
 
   return (
     <>
-         <GeneralFormContainer>
+         <Section>
             <Heading>Personal info</Heading>
             <Text>Please provide your name, email address, and phone number.</Text>
             <FormFirstForm>
@@ -20,7 +20,7 @@ const FormFirst = (): JSX.Element => {
                     <FormFirstInput/>
             </FormFirstForm>
             {!showSmallBg ? <ForwardButton>Next Step</ForwardButton> : null }
-        </GeneralFormContainer>
+        </Section>
           <ButtonMobileContainer>
               {showSmallBg ? <ForwardButton>Next Step</ForwardButton> : null }
           </ButtonMobileContainer>

@@ -59,8 +59,9 @@ export const Logo = styled(Img)`
 export const YearPlanTogglerContainer = styled.div`
     max-width: 450px;
     min-height: 50px;
-    margin-bottom: 90px;
-    display: flex;
+/*     margin-bottom: 100px;
+ */    display: flex;
+    z-index: 1;
     flex-direction: row;
     gap: 20px;
     align-items: center;
@@ -69,9 +70,8 @@ export const YearPlanTogglerContainer = styled.div`
     border-radius: 10px;
 
     @media screen and (max-width: 770px) {
-        margin-bottom: 0px;
-        margin-top: 75px;
-
+/*         margin-top: 75px;
+ */
   }
 `
 

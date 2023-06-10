@@ -13,45 +13,19 @@ const GlobalStyle = createGlobalStyle`
   font-family: 'Ubuntu', sans-serif;
  } 
 `
-
-export const Container = styled.div`
-  background-color: hsl(229, 24%, 87%);
+export const GeneralContainer = styled.div`
+  background-color: hsl(231, 100%, 99%);
   height: 100vh;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
 `
-export const GeneralFormContainer = styled.div`
-   flex: 1;
-   display: flex;
-   flex-direction: column;
-   gap: 5px;
-   /* max-height: 600px; */
-   padding: 50px 100px;
-   max-width: 650px;
-
-   @media screen and (max-width: 930px) {
-    padding: 50px 50px;
-   }
-   @media screen and (max-width: 830px) {
-    padding: 50px 25px;
-   }
-
-   @media screen and (max-width: 770px) {
-        /* min-height: 380px;
-        max-height: 494px;  */
-        height: 395px;
-        width: 342px;
-        padding: 28px 25px;
-        position: absolute;
-        z-index: auto;
-
-        bottom: 236px;
-        background-color: hsl(0, 0%, 100%);
-        border-radius: 10px;
-        
-    }
+export const Section = styled.section`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
 `
 export const TextWrapper = styled.div`
     display: flex;
@@ -73,11 +47,8 @@ export const ButtonMobileContainer = styled.div`
     justify-content: space-between;
     background-color: hsl(0, 0%, 100%);
     min-width: 375px;
-    /* min-height: 70px; */
     min-height: 70px;
-   position: relative;
-   top: 170px;
-
+    z-index: 1;
   }
 `
 export const ButtonContainer = styled.div`

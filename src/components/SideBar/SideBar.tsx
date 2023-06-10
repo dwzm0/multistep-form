@@ -1,5 +1,5 @@
 import React from 'react'
-import { ImgWrapper, StepContainer, StepInfoContainer, InfoText, Step, StepCicle } from './SideBar.elements'
+import { AsideBar, StepContainer, StepInfoContainer, InfoText, Step, StepCicle } from './SideBar.elements'
 import { SubHeading, Img } from '../../globalStyle'
 import { useResize } from '../../hooks/index'
 
@@ -13,7 +13,7 @@ export const SideBar = ({ darkText, smallImg, bigImg }: Props): JSX.Element => {
   const showSmallBg = useResize()
   return (
     <>
-      <ImgWrapper>
+      <AsideBar>
         <StepContainer>
             <Step>
               <StepCicle>1</StepCicle>
@@ -45,7 +45,7 @@ export const SideBar = ({ darkText, smallImg, bigImg }: Props): JSX.Element => {
             </Step>
         </StepContainer>
         {showSmallBg ? <Img src={smallImg}/> : <Img src={bigImg}/>}
-      </ImgWrapper>
+      </AsideBar>
     </>
   )
 }
