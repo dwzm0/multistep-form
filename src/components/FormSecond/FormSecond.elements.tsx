@@ -2,13 +2,11 @@ import styled from 'styled-components'
 import { Text } from '../../globalStyle'
 
 export const SecondFormChoiceContainer = styled.div`
-    flex: 1;
+   
     display: flex;
     flex-direction: row;
     gap: 20px;
-    padding-top: 30px;
-    margin-bottom: 18px;
-    max-height: 200px;
+    
 
     @media screen and (max-width: 770px) {
     flex-direction: column;
@@ -28,14 +26,22 @@ export const SecondFormChoice = styled.div`
     &:hover  {
         border-color:  hsl(213, 96%, 18%);
         cursor: pointer;
+        
     }    
 
 
     @media screen and (max-width: 770px) {
     flex-direction: row; 
-    width: 295px;
+    width: 100%;
     height: 75px;
     }
+`
+
+export const PlanTextWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
 `
 
 export const PriceText = styled(Text)`
@@ -57,11 +63,12 @@ export const Logo = styled.img`
 `
 
 export const YearPlanTogglerContainer = styled.div`
-    max-width: 450px;
+    width: 100%;
     min-height: 50px;
-/*     margin-bottom: 100px;
- */    display: flex;
+    display: flex;
     z-index: 1;
+    margin-top: 30px;
+    margin-bottom: 120px;
     flex-direction: row;
     gap: 20px;
     align-items: center;
@@ -70,8 +77,7 @@ export const YearPlanTogglerContainer = styled.div`
     border-radius: 10px;
 
     @media screen and (max-width: 770px) {
-/*         margin-top: 75px;
- */
+        margin-bottom: 30px;
   }
 `
 

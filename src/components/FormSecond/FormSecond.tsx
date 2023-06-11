@@ -1,6 +1,6 @@
 import React from 'react'
-import { SubHeading, Heading, Text, Section, TextWrapper } from '../../globalStyle'
-import { SecondFormChoiceContainer, SecondFormChoice, LogoContainer, Logo, PriceText, YearPlanTogglerContainer, YearPlanTogglerLabel, YearPlanTogglerInput, YearPlanTogglerSpan } from './FormSecond.elements'
+import { SubHeading, Heading, Text, Section, TextWrapper, Footer, ForwardButton, BackButton } from '../../globalStyle'
+import { SecondFormChoiceContainer, SecondFormChoice, LogoContainer, Logo, PlanTextWrapper, PriceText, YearPlanTogglerContainer, YearPlanTogglerLabel, YearPlanTogglerInput, YearPlanTogglerSpan } from './FormSecond.elements'
 
 interface FormSecondPropsInt {
   arcadeLogo: string
@@ -23,35 +23,37 @@ const FormSecond = ({ togglerMonth, togglerYear, headerText, subText, darkText, 
   return (
     <>
         <Section>
-            <Heading>{headerText}</Heading>
-            <Text>{subText}</Text>
+            <TextWrapper>
+              <Heading>{headerText}</Heading>
+              <Text>{subText}</Text>
+            </TextWrapper>
             <SecondFormChoiceContainer>
                 <SecondFormChoice>
                     <LogoContainer>
                       <Logo src={arcadeLogo}/>
                     </LogoContainer>
-                    <TextWrapper>
+                    <PlanTextWrapper>
                       <SubHeading darkText={darkText}>{arcadeName}</SubHeading>
                       <PriceText>{arcadePrice}</PriceText>
-                    </TextWrapper>
+                    </PlanTextWrapper>
                 </SecondFormChoice>
                 <SecondFormChoice>
                     <LogoContainer>
                       <Logo src={advancedLogo}/>
                     </LogoContainer>
-                    <TextWrapper>
+                    <PlanTextWrapper>
                       <SubHeading darkText={darkText}>{advancedName}</SubHeading>
                       <PriceText>{advancedPrice}</PriceText>
-                    </TextWrapper>
+                    </PlanTextWrapper>
                 </SecondFormChoice>
                 <SecondFormChoice>
                     <LogoContainer>
                       <Logo src={proLogo}/>
                     </LogoContainer>
-                    <TextWrapper>
+                    <PlanTextWrapper>
                       <SubHeading darkText={darkText}>{proName}</SubHeading>
                       <PriceText>{proPrice}</PriceText>
-                    </TextWrapper>
+                    </PlanTextWrapper>
                 </SecondFormChoice>
             </SecondFormChoiceContainer>
             <YearPlanTogglerContainer>
@@ -62,6 +64,10 @@ const FormSecond = ({ togglerMonth, togglerYear, headerText, subText, darkText, 
                   </YearPlanTogglerLabel>
               <SubHeading darkText={true}>{togglerYear}</SubHeading>
             </YearPlanTogglerContainer>
+            <Footer>
+              <BackButton>Go Back</BackButton>
+              <ForwardButton>Next Step</ForwardButton>
+            </Footer>
         </Section>
     </>
   )

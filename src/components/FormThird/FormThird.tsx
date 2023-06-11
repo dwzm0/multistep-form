@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, Heading, Section, TextWrapper } from '../../globalStyle'
+import { Text, Heading, Section, TextWrapper, Footer, ForwardButton, BackButton } from '../../globalStyle'
 import { ThirdFormChoiceContainer, ThirdFormChoice, CheckLabel, CheckSpan, CheckInput, AddonSubheading, AddonText } from './FormThird.elements'
 
 interface FormThirdPropsInt {
@@ -18,8 +18,10 @@ const FormThird = ({ headerText, subText, thirdAddonSubheading, thirdAddonText, 
   return (
     <>
         <Section>
-            <Heading>{headerText}</Heading>
-            <Text>{subText}</Text>
+            <TextWrapper>
+                <Heading>{headerText}</Heading>
+                <Text>{subText}</Text>
+            </TextWrapper>
             <ThirdFormChoiceContainer>
 
                 <ThirdFormChoice>
@@ -54,6 +56,11 @@ const FormThird = ({ headerText, subText, thirdAddonSubheading, thirdAddonText, 
                 </ThirdFormChoice>
 
             </ThirdFormChoiceContainer>
+
+            <Footer>
+                <BackButton>Go Back</BackButton>
+                <ForwardButton>Next Step</ForwardButton>
+            </Footer>
         </Section>
     </>
   )

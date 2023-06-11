@@ -28,42 +28,27 @@ export const GeneralContainer = styled.div`
 `
 export const Section = styled.section`
     width: 100%;
-    height: 100%;
-    display: flex;
+/*     height: 100%;
+ */    display: flex;
     flex-direction: column;
     justify-content: center;
 `
 export const TextWrapper = styled.div`
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    padding: 20px;
+    gap: 10px;
+    margin-bottom: 40px;
     @media screen and (max-width: 770px) { 
-        padding: 16px 0px;
+        gap: 20px;
+        margin-bottom: 20px;
     }
-`
-
-export const Footer = styled.div`
-      display: grid;
-      position:relative;
-      padding: 0;
-      z-index: 20;    
-      
-    @media screen and (max-width: 770px) {
-        background-color: var(--white);
-        padding: 1rem;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-  }
 `
 
 export const Heading = styled.h1`
   font-weight: 700;
   color: var(--marine-blue);
   padding-top: 5px;
-  padding-bottom: 10px;
   font-size: 2rem;
 
   @media screen and (max-width: 770px) {
@@ -90,6 +75,23 @@ export const Text = styled.p`
   
 `
 
+export const Footer = styled.div`
+      display: grid;
+      position:relative;
+      grid-template-columns: 1fr 1fr;
+      padding: 0;
+      z-index: 20;    
+      
+    @media screen and (max-width: 770px) {
+        background-color: var(--white);
+        padding: 1rem;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+  }
+`
+
 const Button = styled.button`
   font-weight: 700;
   border-radius: 7px;
@@ -106,8 +108,10 @@ const Button = styled.button`
   }
 `
 export const BackButton = styled(Button)`
-  background-color: var(--white);
+  background-color:  var(--white);
   color: var(--cool-gray);
+  justify-self: flex-start;
+  
 
   &:hover, :active {
     color: var(--marine-blue);

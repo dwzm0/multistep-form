@@ -8,11 +8,10 @@ export const ThirdFormChoiceContainer = styled.div`
     align-items: center;
     gap: 18px;
     margin-bottom: 80px;
-    margin-top: 30px;
 
     @media screen and (max-width: 770px) {
         margin-bottom: 0px;
-        max-width: 345px;
+        width: 100%;
    }
 
 `
@@ -30,8 +29,7 @@ export const ThirdFormChoice = styled.div`
     }  
 
     @media screen and (max-width: 770px) {
-       width: 294px;
-       height: 60px;
+       width: 100%;
        align-items: center;
     }
 `
