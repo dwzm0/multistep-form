@@ -5,37 +5,37 @@ export const ChoosenPlanContainer = styled.div`
     flex-direction: column;
     gap: 5px;
 `
-export const FinalFormContainer = styled.div`
+export const FourthFormContainer = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 240px;
-    background-color: hsl(217, 100%, 97%);
+    justify-content: space-between;
+    background-color: var(--alabaster);
     padding: 20px;
     width: 450px;
     border-radius: 10px;
-    margin-top: 40px;
     margin-bottom: 30px;
 
 
     @media screen and (max-width: 770px) {
-        gap: 103px;
         margin-top: 0px;
         margin-bottom: 0px;
-        max-width: 320px;
+        width: 100%;
    }
 `
 export const SumContainer = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 230px;
+    justify-content: space-between;
     padding-inline: 20px;
     padding-top: 10px;
     width: 450px;
+    margin-bottom: 190px;
 
     @media screen and (max-width: 770px) {
-        max-width: 320px;
+        width: 100%;
+        margin-bottom: 0px;
    }
 `
 

@@ -54,18 +54,19 @@ export const CheckLabel = styled.label`
   }
 
 `
+
 export const CheckSpan = styled.span`
   border: 1px solid hsl(229, 24%, 87%);
   display: inline-block;
   padding: 10px;
   border-radius: 3px;
+
 `
 
 export const CheckInput = styled.input`
-  display: none;
+   display: none;
 
-  &:checked + &${CheckSpan} {
-    background: #f00;
-    color: #fff;
+  &:checked ${CheckSpan} {
+    background-color: red;
   }
 `

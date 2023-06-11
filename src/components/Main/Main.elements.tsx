@@ -12,7 +12,7 @@ export const MainContainer = styled.main`
         max-width: 448px;
         width: 100%;
         padding: 24px;
-        background-color: var(--alabaster);
+        background-color: var(--white);
         margin: -4.5rem auto 0px;
         z-index: 1;
         box-shadow: rgba(2, 41, 90, 0.05) 0px 8px 24px 24px;
