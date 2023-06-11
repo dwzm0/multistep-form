@@ -1,5 +1,5 @@
 import React from 'react'
-import { SubHeading, Text, Heading, Section, TextWrapper, Footer, ForwardButton, BackButton } from '../../globalStyle'
+import { SubHeading, Text, Heading, StyledSection, TextWrapper, Footer, ForwardButton, BackButton } from '../../globalStyle'
 import { FourthFormContainer, ChoosenPlanContainer, SumContainer, FinalSumText } from './FormFourth.elements'
 
 interface formFinalPropsInt {
@@ -10,7 +10,7 @@ interface formFinalPropsInt {
 const FormFourth = ({ finalHeading, finalText }: formFinalPropsInt): JSX.Element => {
   return (
     <>
-      <Section>
+      <StyledSection>
           <TextWrapper>
             <Heading>{finalHeading}</Heading>
             <Text>{finalText}</Text>
@@ -30,7 +30,7 @@ const FormFourth = ({ finalHeading, finalText }: formFinalPropsInt): JSX.Element
                 <BackButton>Go Back</BackButton>
                 <ForwardButton>Next Step</ForwardButton>
             </Footer>
-      </Section>
+      </StyledSection>
     </>
   )
 }

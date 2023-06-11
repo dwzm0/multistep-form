@@ -1,11 +1,11 @@
 import React from 'react'
-import { Heading, Text, Section, Footer, ForwardButton } from '../../globalStyle'
+import { Heading, Text, StyledSection, Footer, ForwardButton } from '../../globalStyle'
 import { FormFirstForm, FormFirstInput, FormFirstLabel } from './FormFirst.elements'
 
 const FormFirst = (): JSX.Element => {
   return (
     <>
-         <Section>
+         <StyledSection>
             <Heading>Personal info</Heading>
             <Text>Please provide your name, email address, and phone number.</Text>
             <FormFirstForm>
@@ -19,7 +19,7 @@ const FormFirst = (): JSX.Element => {
             <Footer>
               <ForwardButton>Next Step</ForwardButton>
             </Footer>
-          </Section>
+          </StyledSection>
     </>
   )
 }

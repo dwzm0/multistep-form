@@ -26,10 +26,10 @@ export const GeneralContainer = styled.div`
   }
 
 `
-export const Section = styled.section`
+
+export const StyledSection = styled.section`
     width: 100%;
-/*     height: 100%;
- */    display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
 `

@@ -1,5 +1,5 @@
 import React from 'react'
-import { SubHeading, Heading, Text, Section, TextWrapper, Footer, ForwardButton, BackButton } from '../../globalStyle'
+import { SubHeading, Heading, Text, StyledSection, TextWrapper, Footer, ForwardButton, BackButton } from '../../globalStyle'
 import { SecondFormChoiceContainer, SecondFormChoice, LogoContainer, Logo, PlanTextWrapper, PriceText, YearPlanTogglerContainer, YearPlanTogglerLabel, YearPlanTogglerInput, YearPlanTogglerSpan } from './FormSecond.elements'
 
 interface FormSecondPropsInt {
@@ -22,7 +22,7 @@ interface FormSecondPropsInt {
 const FormSecond = ({ togglerMonth, togglerYear, headerText, subText, darkText, arcadeLogo, advancedLogo, proLogo, arcadeName, advancedName, proName, arcadePrice, advancedPrice, proPrice }: FormSecondPropsInt): JSX.Element => {
   return (
     <>
-        <Section>
+        <StyledSection>
             <TextWrapper>
               <Heading>{headerText}</Heading>
               <Text>{subText}</Text>
@@ -68,7 +68,7 @@ const FormSecond = ({ togglerMonth, togglerYear, headerText, subText, darkText, 
               <BackButton>Go Back</BackButton>
               <ForwardButton>Next Step</ForwardButton>
             </Footer>
-        </Section>
+        </StyledSection>
     </>
   )
 }

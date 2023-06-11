@@ -6,13 +6,13 @@ import { formSecondProps } from '../FormSecond/FormSecondProps'
  */
 /* import FormThird from '../FormThird/FormThird'
 import { formThirdProps } from '../FormThird/FormThirdProps' */
-import FormFourth from '../FormFourth/FormFourth'
-import { formFourthProps } from '../FormFourth/FormFourthProps'
+import Final from '../Final/Final'
+import { finalProps } from '../Final/FinalProps'
 const Main = (): JSX.Element => {
   return (
     <>
       <MainContainer>
-        <FormFourth {...formFourthProps}/>
+        <Final {...finalProps}/>
       </MainContainer>
     </>
   )
