@@ -1,6 +1,8 @@
 import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { AppProvider } from './state'
 import GlobalStyle, { GeneralContainer, PanelContainer } from './globalStyle'
-import { SideBar, Contact, Addons, CheckOut, addonsProps, checkOutProps, sideBarProps } from './components'
+import { SideBar, Contact, Plan, Addons, CheckOut, Final, addonsProps, checkOutProps, sideBarProps, planProps, finalProps } from './components'
 
 const App = (): JSX.Element => {
   return (
@@ -8,9 +10,19 @@ const App = (): JSX.Element => {
     <GlobalStyle />
       <GeneralContainer>
         <PanelContainer>
-          <SideBar {...sideBarProps}/>
-          <Contact />
-      </PanelContainer>
+          <AppProvider>
+            <Router>
+              <SideBar {...sideBarProps}/>
+               <Routes>
+                  <Route path='/' element={<Contact />} />
+                  <Route path='/plan' element={<Plan {...planProps} />} />
+                  <Route path='/addons' element={<Addons {...addonsProps} />} />
+                  <Route path='/checkout' element={<CheckOut {...checkOutProps} />} />
+                  <Route path='/final' element={<Final {...finalProps} />} />
+               </Routes>
+            </Router>
+          </AppProvider>
+        </PanelContainer>
       </GeneralContainer>
     </>
   )
