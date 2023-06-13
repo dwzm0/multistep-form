@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-export const formSecondProps = {
+const planProps = {
   arcadeLogo: require('../../images/icon-arcade.svg').default,
   advancedLogo: require('../../images/icon-advanced.svg').default,
   proLogo: require('../../images/icon-pro.svg').default,
@@ -15,3 +15,5 @@ export const formSecondProps = {
   togglerMonth: 'Monthly',
   togglerYear: 'Yearly'
 }
+
+export default planProps

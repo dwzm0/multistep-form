@@ -24,15 +24,48 @@ export const GeneralContainer = styled.div`
     align-items: center;
     justify-content: center;
   }
-
 `
+export const MainContainer = styled.main`
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+   padding: 30px 80px 30px 100px;
+   max-width: 650px;
 
+   @media screen and (max-width: 770px) {
+        max-width: 448px;
+        width: 100%;
+        padding: 24px;
+        background-color: var(--white);
+        margin: -4.5rem auto 0px;
+        z-index: 1;
+        box-shadow: rgba(2, 41, 90, 0.05) 0px 8px 24px 24px;
+        border-radius: 0.5rem;
+    }
+`
+export const PanelContainer = styled.div`
+  display: flex;
+  padding: 20px;
+  margin: 0px auto;                         
+  border-radius: 1rem;
+  background-color: var(--white);
+
+
+  @media screen and (max-width: 770px) {
+    flex-direction: column;
+    padding: 0px;
+    width: 100%;
+    background-color: var(--alabaster);
+  }
+`
 export const StyledSection = styled.section`
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 `
+
 export const TextWrapper = styled.div`
     width: 100%;
     display: flex;

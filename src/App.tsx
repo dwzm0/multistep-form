@@ -1,13 +1,16 @@
 import React from 'react'
-import GlobalStyle, { GeneralContainer } from './globalStyle'
-import Panel from './components/Panel/Panel'
+import GlobalStyle, { GeneralContainer, PanelContainer } from './globalStyle'
+import { SideBar, Contact, Addons, CheckOut, addonsProps, checkOutProps, sideBarProps } from './components'
 
 const App = (): JSX.Element => {
   return (
     <>
     <GlobalStyle />
       <GeneralContainer>
-        <Panel />
+        <PanelContainer>
+          <SideBar {...sideBarProps}/>
+          <Contact />
+      </PanelContainer>
       </GeneralContainer>
     </>
   )

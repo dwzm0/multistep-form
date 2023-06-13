@@ -1,6 +1,6 @@
 import React from 'react'
-import { SubHeading, Heading, Text, StyledSection, TextWrapper, Footer, ForwardButton, BackButton } from '../../globalStyle'
-import { SecondFormChoiceContainer, SecondFormChoice, LogoContainer, Logo, PlanTextWrapper, PriceText, YearPlanTogglerContainer, YearPlanTogglerLabel, YearPlanTogglerInput, YearPlanTogglerSpan } from './FormSecond.elements'
+import { MainContainer, SubHeading, Heading, Text, StyledSection, TextWrapper, Footer, ForwardButton, BackButton } from '../../globalStyle'
+import { SecondFormChoiceContainer, SecondFormChoice, LogoContainer, Logo, PlanTextWrapper, PriceText, YearPlanTogglerContainer, YearPlanTogglerLabel, YearPlanTogglerInput, YearPlanTogglerSpan } from './Plan.elements'
 
 interface FormSecondPropsInt {
   arcadeLogo: string
@@ -19,9 +19,10 @@ interface FormSecondPropsInt {
   togglerYear: string
 }
 
-const FormSecond = ({ togglerMonth, togglerYear, headerText, subText, darkText, arcadeLogo, advancedLogo, proLogo, arcadeName, advancedName, proName, arcadePrice, advancedPrice, proPrice }: FormSecondPropsInt): JSX.Element => {
+const Plan = ({ togglerMonth, togglerYear, headerText, subText, darkText, arcadeLogo, advancedLogo, proLogo, arcadeName, advancedName, proName, arcadePrice, advancedPrice, proPrice }: FormSecondPropsInt): JSX.Element => {
   return (
     <>
+      <MainContainer>
         <StyledSection>
             <TextWrapper>
               <Heading>{headerText}</Heading>
@@ -69,8 +70,9 @@ const FormSecond = ({ togglerMonth, togglerYear, headerText, subText, darkText, 
               <ForwardButton>Next Step</ForwardButton>
             </Footer>
         </StyledSection>
+       </MainContainer>
     </>
   )
 }
 
-export default FormSecond
+export default Plan

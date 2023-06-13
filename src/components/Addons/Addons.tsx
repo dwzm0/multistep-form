@@ -1,6 +1,6 @@
 import React from 'react'
-import { Text, Heading, StyledSection, TextWrapper, Footer, ForwardButton, BackButton } from '../../globalStyle'
-import { ThirdFormChoiceContainer, ThirdFormChoice, CheckLabel, CheckSpan, CheckInput, AddonSubheading, AddonText } from './FormThird.elements'
+import { MainContainer, Text, Heading, StyledSection, TextWrapper, Footer, ForwardButton, BackButton } from '../../globalStyle'
+import { ThirdFormChoiceContainer, ThirdFormChoice, CheckLabel, CheckSpan, CheckInput, AddonSubheading, AddonText } from './Addons.elements'
 
 interface FormThirdPropsInt {
   headerText: string
@@ -14,9 +14,10 @@ interface FormThirdPropsInt {
 
 }
 
-const FormThird = ({ headerText, subText, thirdAddonSubheading, thirdAddonText, firstAddonSubHeading, firstAddonText, secondAddonSubHeading, secondAddonText }: FormThirdPropsInt): JSX.Element => {
+const Addons = ({ headerText, subText, thirdAddonSubheading, thirdAddonText, firstAddonSubHeading, firstAddonText, secondAddonSubHeading, secondAddonText }: FormThirdPropsInt): JSX.Element => {
   return (
     <>
+      <MainContainer>
         <StyledSection>
             <TextWrapper>
                 <Heading>{headerText}</Heading>
@@ -62,8 +63,9 @@ const FormThird = ({ headerText, subText, thirdAddonSubheading, thirdAddonText, 
                 <ForwardButton>Next Step</ForwardButton>
             </Footer>
         </StyledSection>
+      </MainContainer>
     </>
   )
 }
 
-export default FormThird
+export default Addons

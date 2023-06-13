@@ -1,3 +1,6 @@
-export const sideBarProps = {
+
+const sideBarProps = {
   darkText: false
 }
+
+export default sideBarProps

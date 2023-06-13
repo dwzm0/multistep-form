@@ -1,10 +1,11 @@
 import React from 'react'
-import { Heading, Text, StyledSection, Footer, ForwardButton } from '../../globalStyle'
-import { FormFirstForm, FormFirstInput, FormFirstLabel } from './FormFirst.elements'
+import { MainContainer, Heading, Text, StyledSection, Footer, ForwardButton } from '../../globalStyle'
+import { FormFirstForm, FormFirstInput, FormFirstLabel } from './Contact.elements'
 
-const FormFirst = (): JSX.Element => {
+const Contact = (): JSX.Element => {
   return (
     <>
+      <MainContainer>
          <StyledSection>
             <Heading>Personal info</Heading>
             <Text>Please provide your name, email address, and phone number.</Text>
@@ -20,8 +21,9 @@ const FormFirst = (): JSX.Element => {
               <ForwardButton>Next Step</ForwardButton>
             </Footer>
           </StyledSection>
+      </MainContainer>
     </>
   )
 }
 
-export default FormFirst
+export default Contact

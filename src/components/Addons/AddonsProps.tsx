@@ -1,4 +1,4 @@
-export const formThirdProps = {
+const addonsProps = {
   headerText: 'Pick add-ons',
   subText: 'Add-ons help enhance your gaming experience.',
   firstAddonSubHeading: 'Online service',
@@ -8,3 +8,5 @@ export const formThirdProps = {
   thirdAddonSubheading: 'Customizable Profile',
   thirdAddonText: 'Custom theme on your profile'
 }
+
+export default addonsProps
