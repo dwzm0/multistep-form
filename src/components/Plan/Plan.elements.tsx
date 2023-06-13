@@ -1,8 +1,47 @@
 import styled from 'styled-components'
 import { Text } from '../../globalStyle'
 
-export const SecondFormChoiceContainer = styled.div`
-   
+export const PlanForm = styled.form`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+`
+
+export const PlanLable = styled.label`
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 1px solid hsl(229, 24%, 87%);
+    border-radius: 10px;
+    width: 140px;
+    height: 160px;
+
+    transition:0.2s ease-in-out;
+        &:hover,
+        &:focus {
+            background-color:var(--alabaster);
+            border-color:var(--purplish-blue);
+            outline:none;
+            cursor: pointer;
+
+            
+        }
+        &:invalid {
+            border-color:var(--strawberry-red);
+        }  
+
+       
+
+       
+
+    @media screen and (max-width: 770px) {
+    flex-direction: row; 
+    width: 100%;
+    height: 75px;
+    }
+`
+
+export const PlanFormContainer = styled.div`
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -12,29 +51,9 @@ export const SecondFormChoiceContainer = styled.div`
     flex-direction: column;
     gap: 10px;
   }
+
+  
     
-`
-export const SecondFormChoice = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    border: 1px solid hsl(229, 24%, 87%);
-    border-radius: 10px;
-    width: 140px;
-    height: 160px;
-
-    &:hover  {
-        border-color:  hsl(213, 96%, 18%);
-        cursor: pointer;
-        
-    }    
-
-
-    @media screen and (max-width: 770px) {
-    flex-direction: row; 
-    width: 100%;
-    height: 75px;
-    }
 `
 
 export const PlanTextWrapper = styled.div`
@@ -60,6 +79,25 @@ export const Logo = styled.img`
     width: 40px;
     height: 40px;
 
+`
+
+export const PlanInput = styled.input`
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+
+    &:checked + ${PlanLable}{
+        background-color:var(--alabaster);
+        border-color:var(--purplish-blue);
+        outline:none;
+  }
+    
 `
 
 export const YearPlanTogglerContainer = styled.div`

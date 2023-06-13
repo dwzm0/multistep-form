@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const FormFirstForm = styled.form`
+export const ContactForm = styled.form`
   width: 100%;
   height: 100%;
   display: flex;
@@ -14,14 +14,19 @@ export const FormFirstForm = styled.form`
     padding: 0px;
   }
 `
-export const FormFirstInput = styled.input`
+interface InputProps {
+  readonly redBorder: boolean
+}
+
+export const ContactInput = styled.input<InputProps>`
   font-size: 16px;
   color: hsl(213, 96%, 18%);
   font-weight: 700;
   padding: 14px 20px;
   border-radius: 5px;
   width: 100%;
-  border: 1px solid hsl(231, 11%, 63%);
+  border: 1px solid;
+  border-color: ${({ redBorder }) => (redBorder ? 'hsl(354, 84%, 57%)' : 'hsl(231, 11%, 63%)')};
 
   &:hover {
     border-color: hsl(243, 100%, 62%);
@@ -29,15 +34,29 @@ export const FormFirstInput = styled.input`
   }
   
   &::placeholder {
-    color: #242424;
+    color: var(--light-gray);
   }
 
   @media screen and (max-width: 770px) {
     padding: 10px 20px;
   }
-
 `
-export const FormFirstLabel = styled.label`
+export const LabelContainer = styled.div`
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+`
+
+export const LabelError = styled.p`
+  font-size: 14px;
+  display: block;
+  font-weight: 700;
+  color: var(--strawberry-red);
+  padding-top: 15px;
+  padding-bottom: 5px;
+`
+export const ContactFormLabel = styled.label`
   font-size: 14px;
   display: block;
   padding-top: 15px;
