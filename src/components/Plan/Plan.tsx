@@ -69,6 +69,7 @@ const Plan = ({ togglerMonth, togglerYear, headerText, subText, darkText, arcade
               <Heading>{headerText}</Heading>
               <Text>{subText}</Text>
             </TextWrapper>
+
             <PlanForm onSubmit={handleSubmit(saveData)}>
                <PlanFormContainer>
                 <PlanInput {...register('plan_option')} type="radio" value={plans.arcade.title} id="arcade"/>

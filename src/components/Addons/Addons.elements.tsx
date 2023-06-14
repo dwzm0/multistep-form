@@ -1,37 +1,54 @@
 import styled from 'styled-components'
 import { Text, SubHeading } from '../../globalStyle'
+import checkImg from '../../images/icon-checkmark.svg'
 
-export const ThirdFormChoiceContainer = styled.div`
+export const AddonsForm = styled.form`
     display: flex;
+    width: 100%;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 18px;
-    margin-bottom: 80px;
 
-    @media screen and (max-width: 770px) {
-        margin-bottom: 0px;
-        width: 100%;
+   :nth-child(3) {
+      margin-bottom: 50px;
    }
-
 `
-export const ThirdFormChoice = styled.div`
+export const AddonContainer = styled.div`
+  width: 100%;
+`
+
+export const AddonLable = styled.label`
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 20px;
     height: 80px;
     width: 450px;
     border: 1px solid hsl(229, 24%, 87%);
-    border-radius: 10px;
+    border-radius: 8px;
+    transition:0.2s ease-in-out;
 
-    &:hover  {
-        border-color:  hsl(213, 96%, 18%);
+    &:hover,
+    &:focus {
+        border-color:var(--purplish-blue);
+        outline:none;
         cursor: pointer;
-    }  
+    }
 
     @media screen and (max-width: 770px) {
        width: 100%;
        align-items: center;
     }
+
+`
+
+export const AddonTextWrapper = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 5px;
 `
 export const AddonSubheading = styled(SubHeading)`
     font-size: 16px;
@@ -45,28 +62,57 @@ export const AddonText = styled(Text)`
     font-size: 14px;
   }
 `
-export const CheckLabel = styled.label`
-  padding-top: 30px; 
-  padding-left: 20px;
-
-  @media screen and (max-width: 770px) {
-    padding: 20px 14px;
-  }
-
+export const CheckMark = styled.div`
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    position:relative;
+    padding-right: 20px;
+    &:before,
+    &:after {
+        content:'';
+        width: 1.25rem;
+        height:1.25rem;
+        display:block;
+        border-radius: 5px;
+    }
+    &:before {
+        background-color:var(--white);
+        border:1px solid var(--light-gray);
+        
+    }
+    &:after {
+        position:absolute;
+        left:1px;
+    }
 `
 
-export const CheckSpan = styled.span`
-  border: 1px solid hsl(229, 24%, 87%);
-  display: inline-block;
-  padding: 10px;
-  border-radius: 3px;
+export const CheckMarkInput = styled.input`
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
 
+    &:checked + ${AddonLable}{
+        background-color:var(--alabaster);
+        border-color:var(--purplish-blue);
+        outline:none;
+
+       ${CheckMark} {
+          &:after {
+            background:var(--purplish-blue) url(${checkImg}) no-repeat center;
+          }
+       } 
+    }
 `
 
-export const CheckInput = styled.input`
-   display: none;
-
-  &:checked ${CheckSpan} {
-    background-color: red;
-  }
+export const AddonPriceText = styled.p`
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--purplish-blue);
 `

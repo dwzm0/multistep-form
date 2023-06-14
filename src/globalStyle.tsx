@@ -113,7 +113,7 @@ export const Footer = styled.div`
       position:relative;
       grid-template-columns: 1fr 1fr;
       padding: 0;
-      z-index: 20;    
+      z-index: 20;
       
     @media screen and (max-width: 770px) {
         background-color: var(--white);
