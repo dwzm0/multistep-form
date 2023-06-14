@@ -30,9 +30,6 @@ export const PlanLable = styled.label`
             border-color:var(--strawberry-red);
         }  
 
-       
-
-       
 
     @media screen and (max-width: 770px) {
     flex-direction: row; 
@@ -54,6 +51,19 @@ export const PlanFormContainer = styled.div`
 
   
     
+`
+export const ExtraText = styled.p`
+    font-size: 13px;
+    color: var(--marine-blue);
+`
+interface TogglerTextProps {
+  readonly toggleColor: boolean
+}
+
+export const TogglerText = styled.p<TogglerTextProps>`
+    font-size: 15px;
+    font-weight: 600;
+    color: ${({ toggleColor }) => (toggleColor ? 'hsl(213, 96%, 18%)' : 'hsl(231, 11%, 63%)')};
 `
 
 export const PlanTextWrapper = styled.div`
