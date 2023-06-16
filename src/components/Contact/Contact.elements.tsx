@@ -1,18 +1,29 @@
 import styled from 'styled-components'
+import { TextWrapper } from '../../globalStyle'
 
 export const ContactForm = styled.form`
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding-top: 22px;
-  padding-bottom: 100px;
+  
+  :nth-child(3) {
+    padding-top: 10px;
+  }
+
+  :nth-child(5) {
+    padding-top: 10px;
+  }
 
   @media screen and (max-width: 770px) {
-    padding: 0px;
+    :nth-child(3) {
+      padding-top: 0px;
+    }
+    :nth-child(5) {
+      padding-top: 0px;
+    }
   }
+
 `
 interface InputProps {
   readonly redBorder: boolean
@@ -71,5 +82,13 @@ export const ContactFormLabel = styled.label`
     &:not(:first-child) {
     padding-top: 18px;
   }
+  }
+`
+
+export const ContactTextWrapper = styled(TextWrapper)`
+  margin-bottom: 30px;
+
+  @media screen and (max-width: 770px) {
+    margin-bottom: 15px;
   }
 `

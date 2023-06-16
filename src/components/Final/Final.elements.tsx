@@ -2,9 +2,16 @@ import styled from 'styled-components'
 import { StyledSection, TextWrapper } from '../../globalStyle'
 
 export const StyledSectionFinal = styled(StyledSection)`
+    width: 442px;
     height: 100%;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: 770px) { 
+        width: 100%;
+        gap: 10px
+    }
+
 `
 export const TextWrapperFinal = styled(TextWrapper)`
     align-items: center;

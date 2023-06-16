@@ -3,6 +3,7 @@ import { Text } from '../../globalStyle'
 
 export const PlanForm = styled.form`
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
 `
@@ -13,7 +14,7 @@ export const PlanLable = styled.label`
     justify-content: flex-start;
     border: 1px solid hsl(229, 24%, 87%);
     border-radius: 10px;
-    width: 140px;
+    width: 134px;
     height: 160px;
 
     transition:0.2s ease-in-out;
@@ -24,7 +25,6 @@ export const PlanLable = styled.label`
             outline:none;
             cursor: pointer;
 
-            
         }
         &:invalid {
             border-color:var(--strawberry-red);
@@ -37,20 +37,15 @@ export const PlanLable = styled.label`
     height: 75px;
     }
 `
-
 export const PlanFormContainer = styled.div`
     display: flex;
     flex-direction: row;
     gap: 20px;
-    
 
     @media screen and (max-width: 770px) {
     flex-direction: column;
     gap: 10px;
   }
-
-  
-    
 `
 export const ExtraText = styled.p`
     font-size: 13px;
@@ -88,7 +83,6 @@ export const LogoContainer = styled.div`
 export const Logo = styled.img`
     width: 40px;
     height: 40px;
-
 `
 
 export const PlanInput = styled.input`
@@ -107,7 +101,6 @@ export const PlanInput = styled.input`
         border-color:var(--purplish-blue);
         outline:none;
   }
-    
 `
 
 export const YearPlanTogglerContainer = styled.div`
@@ -116,7 +109,6 @@ export const YearPlanTogglerContainer = styled.div`
     display: flex;
     z-index: 1;
     margin-top: 30px;
-    margin-bottom: 120px;
     flex-direction: row;
     gap: 20px;
     align-items: center;

@@ -5,8 +5,8 @@ import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
 import { useAppState } from '../../state'
 
-import { MainContainer, Heading, Text, StyledSection, Footer, ForwardButton } from '../../globalStyle'
-import { ContactForm, ContactInput, ContactFormLabel, LabelContainer, LabelError } from './Contact.elements'
+import { MainContainer, Heading, Text, StyledSection, Footer, ForwardButton, FormWrapper } from '../../globalStyle'
+import { ContactForm, ContactInput, ContactTextWrapper, ContactFormLabel, LabelContainer, LabelError } from './Contact.elements'
 
 interface Props {
   redBorder: boolean
@@ -31,9 +31,12 @@ const Contact = ({ redBorder }: Props): JSX.Element => {
     <>
       <MainContainer>
          <StyledSection>
-            <Heading>Personal info</Heading>
-            <Text>Please provide your name, email address, and phone number.</Text>
+            <ContactTextWrapper>
+              <Heading>Personal info</Heading>
+              <Text>Please provide your name, email address, and phone number.</Text>
+            </ContactTextWrapper>
             <ContactForm onSubmit={handleSubmit(saveData)}>
+                  <FormWrapper>
                     <LabelContainer>
                       <ContactFormLabel>Name</ContactFormLabel>
                       {<LabelError>{errors?.name?.message?.toString()}</LabelError>}
@@ -61,6 +64,7 @@ const Contact = ({ redBorder }: Props): JSX.Element => {
                     redBorder={((errors?.number) != null)}
                     placeholder='e.g +1234567890'
                     {...register('number', { required: 'Number is required' })}/>
+                  </FormWrapper>
 
                     <Footer>
                       <ForwardButton>Next Step</ForwardButton>

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
 /* eslint-disable @typescript-eslint/no-misused-promises */
 import React from 'react'
-import { MainContainer, Text, Heading, StyledSection, TextWrapper, Footer, ForwardButton, BackButton } from '../../globalStyle'
+import { FormWrapper, MainContainer, Text, Heading, StyledSection, TextWrapper, Footer, ForwardButton, BackButton } from '../../globalStyle'
 import { AddonTextWrapper, AddonLable, CheckMark, AddonPriceText, AddonsForm, AddonContainer, AddonSubheading, AddonText, CheckMarkInput } from './Addons.elements'
 
 import { useForm } from 'react-hook-form'
@@ -60,6 +60,8 @@ const Addons = ({ headerText, subText, addons }: AddonsFormPropsInt): JSX.Elemen
             </TextWrapper>
             <AddonsForm onSubmit={handleSubmit(saveData)}>
 
+            <FormWrapper>
+
                 <AddonContainer>
 
                     <CheckMarkInput {...register('plan_addon')} type='checkbox' value={JSON.stringify(addons.online_service)} id="online_service"/>
@@ -100,6 +102,8 @@ const Addons = ({ headerText, subText, addons }: AddonsFormPropsInt): JSX.Elemen
                     </AddonLable>
 
                 </AddonContainer>
+
+            </FormWrapper>
 
                 <Footer>
                     <Link to='/plan'>

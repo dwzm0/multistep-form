@@ -30,7 +30,9 @@ export const MainContainer = styled.main`
    display: flex;
    flex-direction: column;
    gap: 5px;
-   padding: 30px 80px 30px 100px;
+   padding-top: 30px;
+   padding-left: 100px;
+   padding-right: 80px;
    max-width: 650px;
 
    @media screen and (max-width: 770px) {
@@ -61,11 +63,15 @@ export const PanelContainer = styled.div`
 `
 export const StyledSection = styled.section`
     width: 100%;
+    height: 100%; 
     display: flex;
     flex-direction: column;
     justify-content: center;
 `
-
+export const FormWrapper = styled.div`
+    width: 100%;
+    flex-grow: 1;
+`
 export const TextWrapper = styled.div`
     width: 100%;
     display: flex;
@@ -101,18 +107,20 @@ export const SubHeading = styled.h2<TextProps>`
 export const Text = styled.p`
   font-weight: 400;
   color: var(--cool-gray);
-
-  @media screen and (max-width: 770px) {
-    font-size: 17px;
-  }
+  font-size: 16px;
   
 `
 
 export const Footer = styled.div`
       display: grid;
+      width: 100%;
       position:relative;
       grid-template-columns: 1fr 1fr;
-      padding: 0;
+      left: auto;
+      right: auto;
+      bottom: auto;
+      padding-bottom: 10px;
+      
       z-index: 20;
       
     @media screen and (max-width: 770px) {
@@ -122,8 +130,25 @@ export const Footer = styled.div`
         bottom: 0;
         left: 0;
         right: 0;
+        padding-bottom: 0px;
+
   }
 `
+export const FlexRow = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`
+/* export const FlexCol = styled.div`
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+` */
 
 const Button = styled.button`
   font-weight: 700;
@@ -153,6 +178,7 @@ export const BackButton = styled(Button)`
 export const ForwardButton = styled(Button)`
   background-color: var(--marine-blue);
   color: var(--white);
+  grid-column: 2 / 3;
   justify-self: flex-end;
 
   &:hover {

@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-misused-promises */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from 'react'
-import { MainContainer, SubHeading, Heading, Text, StyledSection, TextWrapper, Footer, ForwardButton, BackButton } from '../../globalStyle'
+import { MainContainer, SubHeading, Heading, Text, StyledSection, TextWrapper, Footer, ForwardButton, BackButton, FormWrapper } from '../../globalStyle'
 import { TogglerText, ExtraText, PlanFormContainer, PlanInput, PlanForm, PlanLable, LogoContainer, Logo, PlanTextWrapper, PriceText, YearPlanTogglerContainer, YearPlanTogglerLabel, YearPlanTogglerInput, YearPlanTogglerSpan } from './Plan.elements'
 
 import { useForm } from 'react-hook-form'
@@ -71,6 +71,7 @@ const Plan = ({ togglerMonth, togglerYear, headerText, subText, darkText, arcade
             </TextWrapper>
 
             <PlanForm onSubmit={handleSubmit(saveData)}>
+              <FormWrapper>
                <PlanFormContainer>
                 <PlanInput {...register('plan_option')} type="radio" value={plans.arcade.title} id="arcade"/>
                 <PlanLable htmlFor='arcade'>
@@ -125,6 +126,7 @@ const Plan = ({ togglerMonth, togglerYear, headerText, subText, darkText, arcade
                         </YearPlanTogglerLabel>
                     <TogglerText toggleColor={yearPlan}>{togglerYear}</TogglerText>
                   </YearPlanTogglerContainer>
+                  </FormWrapper>
 
                   <Footer>
                       <Link to='/'>

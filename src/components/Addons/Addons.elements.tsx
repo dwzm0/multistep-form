@@ -5,15 +5,12 @@ import checkImg from '../../images/icon-checkmark.svg'
 export const AddonsForm = styled.form`
     display: flex;
     width: 100%;
+    height: 100%;
     flex-direction: column;
-    gap: 18px;
-
-   :nth-child(3) {
-      margin-bottom: 50px;
-   }
 `
 export const AddonContainer = styled.div`
-  width: 100%;
+    width: 100%;
+    padding-bottom: 14px;
 `
 
 export const AddonLable = styled.label`
@@ -23,7 +20,7 @@ export const AddonLable = styled.label`
     align-items: center;
     padding-inline: 20px;
     height: 80px;
-    width: 450px;
+    width: 442px;
     border: 1px solid hsl(229, 24%, 87%);
     border-radius: 8px;
     transition:0.2s ease-in-out;
