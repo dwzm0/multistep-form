@@ -3,9 +3,10 @@ import React, { createContext, useContext, useState } from 'react'
 export const AppStateContext = createContext({})
 
 export const AppProvider = ({ children }: any): any => {
-  const value = useState({})
+  const value = useState({ step: 1 })
+
   return (
-    <AppStateContext.Provider value={value}>
+    <AppStateContext.Provider value={value} >
       {children}
     </AppStateContext.Provider>
   )

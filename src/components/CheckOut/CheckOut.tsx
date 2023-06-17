@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
 /* eslint-disable @typescript-eslint/no-misused-promises */
-import React from 'react'
+import React, { useEffect } from 'react'
 import { FormWrapper, FlexRow, MainContainer, SubHeading, Text, Heading, StyledSection, TextWrapper, Footer, ForwardButton, BackButton } from '../../globalStyle'
 import { StyledHr, ChoosenPlanWrapper, CheckOutConfirmForm, ChoosenPlan, ChoosenPlanContainer, SumContainer, FinalSumText, SmText } from './CheckOut.elements'
 
@@ -16,7 +16,7 @@ interface formFinalPropsInt {
 }
 
 const CheckOut = ({ finalHeading, finalText }: formFinalPropsInt): JSX.Element => {
-  const [state] = useAppState()
+  const [state, setState] = useAppState()
   const { handleSubmit } = useForm({ defaultValues: state })
   const navigate = useNavigate()
 
@@ -33,6 +33,10 @@ const CheckOut = ({ finalHeading, finalText }: formFinalPropsInt): JSX.Element =
     }
     return sum
   }
+
+  useEffect(() => {
+    setState({ ...state, step: 4 })
+  }, [])
 
   const saveData = (data: any): any => {
     console.log(data)
@@ -86,7 +90,7 @@ const CheckOut = ({ finalHeading, finalText }: formFinalPropsInt): JSX.Element =
 
                   <Footer>
                       <Link to='/addons'>
-                        <BackButton>Go Back</BackButton>
+                        <BackButton >Go Back</BackButton>
                       </Link>
                         <ForwardButton>Confirm</ForwardButton>
                   </Footer>

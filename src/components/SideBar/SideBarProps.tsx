@@ -1,6 +1,6 @@
-
 const sideBarProps = {
-  darkText: false
+  darkText: false,
+  stepToggler: false
 }
 
 export default sideBarProps

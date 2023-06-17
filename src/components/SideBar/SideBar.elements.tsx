@@ -4,6 +4,10 @@ import { Text } from '../../globalStyle'
 import BigImg from '../../images/bg-sidebar-desktop.svg'
 import SmallImg from '../../images/bg-sidebar-mobile.svg'
 
+interface TogglerStepProps {
+  readonly stepToggler: boolean
+}
+
 export const AsideBar = styled.aside`
     background-image: url(${BigImg});
      width: 274px;
@@ -40,9 +44,8 @@ export const Step = styled.div`
     flex-direction: row;
     gap: 10px;
     align-items: center;
-
-    
 `
+
 export const StepInfoContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -55,14 +58,15 @@ export const StepInfoContainer = styled.div`
 export const InfoText = styled(Text)`
     letter-spacing: -1px;
 `
-export const StepCicle = styled.div`
+export const StepCicle = styled.div<TogglerStepProps>`
     border-radius: 50%;
     width: 33px;
     height: 33px;
     padding: 10px;
     border: 1px solid hsl(0, 0%, 100%);
     text-align: center;
-    color: hsl(0, 0%, 100%);
+    color: ${({ stepToggler }) => (stepToggler ? 'hsl(213, 96%, 18%)' : 'hsl(0, 0%, 100%) ')} ;
+    background-color: ${({ stepToggler }) => (stepToggler ? 'hsl(0, 0%, 100%)' : 'transparent')};
     font-size: 14px;
     font-weight: 600;
     line-height: 12px;

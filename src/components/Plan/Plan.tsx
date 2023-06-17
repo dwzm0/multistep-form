@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
 /* eslint-disable @typescript-eslint/no-misused-promises */
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { MainContainer, SubHeading, Heading, Text, StyledSection, TextWrapper, Footer, ForwardButton, BackButton, FormWrapper } from '../../globalStyle'
 import { TogglerText, ExtraText, PlanFormContainer, PlanInput, PlanForm, PlanLable, LogoContainer, Logo, PlanTextWrapper, PriceText, YearPlanTogglerContainer, YearPlanTogglerLabel, YearPlanTogglerInput, YearPlanTogglerSpan } from './Plan.elements'
 
@@ -48,6 +48,10 @@ const Plan = ({ togglerMonth, togglerYear, headerText, subText, darkText, arcade
   const [yearPlan, setYearPlan] = useState(false)
   const { handleSubmit, register, setValue } = useForm({ defaultValues: state })
   const navigate = useNavigate()
+
+  useEffect(() => {
+    setState({ ...state, step: 2 })
+  }, [])
 
   const saveData = (data: any): any => {
     const planArr = Object.entries(plans)
@@ -130,7 +134,7 @@ const Plan = ({ togglerMonth, togglerYear, headerText, subText, darkText, arcade
 
                   <Footer>
                       <Link to='/'>
-                        <BackButton>Go Back</BackButton>
+                        <BackButton >Go Back</BackButton>
                       </Link>
                       <ForwardButton>Next Step</ForwardButton>
                   </Footer>

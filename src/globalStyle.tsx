@@ -130,7 +130,7 @@ export const Footer = styled.div`
         bottom: 0;
         left: 0;
         right: 0;
-        padding-bottom: 0px;
+        
 
   }
 `
@@ -141,14 +141,6 @@ export const FlexRow = styled.div`
   justify-content: space-between;
   align-items: center;
 `
-/* export const FlexCol = styled.div`
-  width: 100%;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-` */
 
 const Button = styled.button`
   font-weight: 700;
@@ -156,6 +148,7 @@ const Button = styled.button`
   border: none;
   padding: 15px 25px;
   cursor: pointer;
+  min-width: 122px;
 
   @media screen and (max-width: 770px) {
     border-radius: 3px;
@@ -163,6 +156,7 @@ const Button = styled.button`
     font-size: 15px;
     align-self: auto;
     margin-inline: 20px;  
+    min-width: 122px;
   }
 `
 export const BackButton = styled(Button)`

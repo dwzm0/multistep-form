@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
 /* eslint-disable @typescript-eslint/no-misused-promises */
-import React from 'react'
+import React, { useEffect } from 'react'
 import { FormWrapper, MainContainer, Text, Heading, StyledSection, TextWrapper, Footer, ForwardButton, BackButton } from '../../globalStyle'
 import { AddonTextWrapper, AddonLable, CheckMark, AddonPriceText, AddonsForm, AddonContainer, AddonSubheading, AddonText, CheckMarkInput } from './Addons.elements'
 
@@ -43,6 +43,10 @@ const Addons = ({ headerText, subText, addons }: AddonsFormPropsInt): JSX.Elemen
   const [state, setState] = useAppState()
   const { handleSubmit, register } = useForm({ defaultValues: state })
   const navigate = useNavigate()
+
+  useEffect(() => {
+    setState({ ...state, step: 3 })
+  }, [])
 
   const saveData = (data: any): any => {
     setState({ ...state, ...data })
@@ -106,8 +110,8 @@ const Addons = ({ headerText, subText, addons }: AddonsFormPropsInt): JSX.Elemen
             </FormWrapper>
 
                 <Footer>
-                    <Link to='/plan'>
-                        <BackButton>Go Back</BackButton>
+                    <Link to='/plan' >
+                        <BackButton >Go Back</BackButton>
                     </Link>
                     <ForwardButton>Next Step</ForwardButton>
                 </Footer>

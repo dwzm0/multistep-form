@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-misused-promises */
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
 import { useAppState } from '../../state'
@@ -14,12 +14,17 @@ interface Props {
 
 const Contact = ({ redBorder }: Props): JSX.Element => {
   const [state, setState] = useAppState()
+
   const {
     handleSubmit,
     register,
     formState: { errors }
   } = useForm({ defaultValues: state, mode: 'onSubmit' })
   const navigate = useNavigate()
+
+  useEffect(() => {
+    setState({ ...state, step: 1 })
+  }, [])
 
   const saveData = (data: any): any => {
     setState({ ...state, ...data })

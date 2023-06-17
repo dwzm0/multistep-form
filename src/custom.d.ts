@@ -5,5 +5,6 @@ declare module 'styled-components' {
     darkText: boolean
     redBorder: boolean
     toggleColor: boolean
+    stepToggler: boolean
   }
 }
