@@ -4,10 +4,13 @@
 import React, { useState, useEffect } from 'react'
 import { MainContainer, SubHeading, Heading, Text, StyledSection, TextWrapper, Footer, ForwardButton, BackButton, FormWrapper } from '../../globalStyle'
 import { TogglerText, ExtraText, PlanFormContainer, PlanInput, PlanForm, PlanLable, LogoContainer, Logo, PlanTextWrapper, PriceText, YearPlanTogglerContainer, YearPlanTogglerLabel, YearPlanTogglerInput, YearPlanTogglerSpan } from './Plan.elements'
-
 import { useForm } from 'react-hook-form'
+import { yupResolver } from '@hookform/resolvers/yup'
+
 import { useNavigate, Link } from 'react-router-dom'
 import { useAppState } from '../../state'
+
+import { string, object } from 'yup'
 
 interface FormSecondPropsInt {
   arcadeLogo: string
@@ -43,10 +46,14 @@ interface FormSecondPropsInt {
   togglerYear: string
 }
 
+const schema = object().shape({
+  plan_option: string().required()
+})
+
 const Plan = ({ togglerMonth, togglerYear, headerText, subText, darkText, arcadeLogo, advancedLogo, proLogo, plans }: FormSecondPropsInt): JSX.Element => {
   const [state, setState] = useAppState()
   const [yearPlan, setYearPlan] = useState(false)
-  const { handleSubmit, register, setValue } = useForm({ defaultValues: state })
+  const { handleSubmit, register, setValue } = useForm({ defaultValues: state, resolver: yupResolver(schema) })
   const navigate = useNavigate()
 
   useEffect(() => {

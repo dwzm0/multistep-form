@@ -59,7 +59,13 @@ const Contact = ({ redBorder }: Props): JSX.Element => {
                     <ContactInput
                     redBorder={((errors?.email) != null)}
                     placeholder='e.g stephenking@lorem.com'
-                    {...register('email', { required: 'Email is required' })} type="email"/>
+                    {...register('email', {
+                      required: 'Email is required',
+                      pattern: {
+                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                        message: 'Invalid email address'
+                      }
+                    })} type="email"/>
 
                     <LabelContainer>
                       <ContactFormLabel >Phone Number</ContactFormLabel>
@@ -67,8 +73,14 @@ const Contact = ({ redBorder }: Props): JSX.Element => {
                     </LabelContainer>
                     <ContactInput
                     redBorder={((errors?.number) != null)}
-                    placeholder='e.g +1234567890'
-                    {...register('number', { required: 'Number is required' })}/>
+                    placeholder='e.g +123456789000'
+                    {...register('number', {
+                      required: 'Number is required',
+                      pattern: {
+                        value: /^\+?([0-9]{3})\)?[-. ]?([0-9]{5})[-. ]?([0-9]{4})$/,
+                        message: 'Invalid number format'
+                      }
+                    })}/>
                   </FormWrapper>
 
                     <Footer>

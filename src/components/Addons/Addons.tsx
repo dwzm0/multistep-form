@@ -3,7 +3,6 @@
 import React, { useEffect } from 'react'
 import { FormWrapper, MainContainer, Text, Heading, StyledSection, TextWrapper, Footer, ForwardButton, BackButton } from '../../globalStyle'
 import { AddonTextWrapper, AddonLable, CheckMark, AddonPriceText, AddonsForm, AddonContainer, AddonSubheading, AddonText, CheckMarkInput } from './Addons.elements'
-
 import { useForm } from 'react-hook-form'
 import { useNavigate, Link } from 'react-router-dom'
 import { useAppState } from '../../state'
