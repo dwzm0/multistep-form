@@ -4,12 +4,12 @@ on:
   push:
     branches:
       - main
-  jobs:
+jobs:
   simple_deployment_pipeline:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3    
       - name: Build project
         run: npm run build
-      - uses: actions/upload-pages-artifact  
-      - uses: actions/deploy-pages
+      - uses: actions/upload-pages-artifact@v1 
+      - uses: actions/deploy-pages@v1
