@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as HashRouter, Routes, Route } from 'react-router-dom'
 import { AppProvider } from './state'
 import GlobalStyle, { GeneralContainer, PanelContainer } from './globalStyle'
 import { SideBar, Contact, Plan, Addons, CheckOut, Final, addonsProps, checkOutProps, sideBarProps, planProps, finalProps, contactProps } from './components'
@@ -11,7 +11,7 @@ const App = (): JSX.Element => {
       <GeneralContainer>
         <PanelContainer>
           <AppProvider>
-            <Router>
+            <HashRouter>
               <SideBar {...sideBarProps}/>
                <Routes>
                   <Route path='/' element={<Contact {...contactProps}/>} />
@@ -20,7 +20,7 @@ const App = (): JSX.Element => {
                   <Route path='/checkout' element={<CheckOut {...checkOutProps} />} />
                   <Route path='/final' element={<Final {...finalProps} />} />
                </Routes>
-            </Router>
+            </HashRouter>
           </AppProvider>
         </PanelContainer>
       </GeneralContainer>

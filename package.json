@@ -1,5 +1,4 @@
 {
-  "homepage": "./",
   "name": "client",
   "version": "0.1.0",
   "private": true,
@@ -12,7 +11,6 @@
     "@types/node": "^16.18.34",
     "@types/react": "^18.2.7",
     "@types/react-dom": "^18.2.4",
-    "gh-pages": "^5.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.44.3",
@@ -28,8 +26,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint --fix './src/**/*.{ts,tsx}'",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [
